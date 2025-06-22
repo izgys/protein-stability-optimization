@@ -1,9 +1,8 @@
 # 🧬 Protein Stability Optimization with AI + Molecular Dynamics
 
-**Author:** [Your Name]  
+**Author:** Iker Zapirain Gysling  
 **Project Type:** Computational Protein Design + Machine Learning + Molecular Simulation  
 **Status:** 🚧 In Progress  
-**Estimated Time:** ~5 weeks (1 hour/day)
 
 ---
 
