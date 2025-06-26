@@ -47,11 +47,10 @@ plt.ylabel("pLDDT (0–100)", fontsize=12, fontweight='bold')
 plt.xticks(rotation=45, fontsize=10, fontweight='bold')
 plt.yticks(fontsize=10)
 
-# Annotate bars with score values
 for bar, score in zip(barplot.patches, plddts):
     barplot.text(
         bar.get_x() + bar.get_width() / 2,
-        bar.get_height() - 3,
+        bar.get_height() / 2,  # <-- center vertically
         f"{score:.1f}",
         ha='center',
         va='center',
@@ -59,6 +58,7 @@ for bar, score in zip(barplot.patches, plddts):
         fontweight='bold',
         color='white'
     )
+
 
 # Save and display
 plt.tight_layout()
