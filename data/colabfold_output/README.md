@@ -1,18 +1,37 @@
-# 🧬 ColabFold Output: T4 Lysozyme WT and Mutants
+# ColabFold Output: T4 Lysozyme WT and Mutants
 
-This folder contains the output files from running [ColabFold](https://github.com/sokrypton/ColabFold) on the **wild-type (WT)** sequence of T4 Lysozyme and five **mutant sequences** generated with ProteinMPNN.
+This folder contains the output files from running [ColabFold](https://github.com/sokrypton/ColabFold) on the **wild-type (WT)** sequence of T4 Lysozyme and **11 mutant sequences** generated with **ProteinMPNN** under different sampling temperatures.
 
 Each model (WT and mutants) has its own subfolder inside `colabfold_output/`, following the structure:
 
 - `wt_model/`
-- `mutant_0001/`
-- `mutant_0002/`
-- ...
-- `mutant_0005/`
+- `mutant_0001/` to `mutant_0011/`
 
 All output files from ColabFold are stored separately inside each corresponding folder.
 
-## 📁 File Descriptions
+---
+
+## 1. ProteinMPNN Mutant Details
+
+The mutant sequences were generated using **ProteinMPNN (seed=474)** with varying sampling temperatures to explore sequence diversity:
+
+| Mutant Folder  | Temperature |
+|----------------|-------------|
+| `mutant_0001`  | 0.1         |
+| `mutant_0002`  | 0.1         |
+| `mutant_0003`  | 0.1         |
+| `mutant_0004`  | 0.1         |
+| `mutant_0005`  | 0.1         |
+| `mutant_0006`  | 0.3         |
+| `mutant_0007`  | 0.3         |
+| `mutant_0008`  | 0.5         |
+| `mutant_0009`  | 0.5         |
+| `mutant_0010`  | 0.9         |
+| `mutant_0011`  | 0.9         |
+
+---
+
+## 2. File Descriptions
 
 | File | Description |
 |------|-------------|
@@ -26,7 +45,7 @@ All output files from ColabFold are stored separately inside each corresponding 
 
 ---
 
-## 🧪 Run Parameters
+## 3. Run Parameters
 
 - Structure prediction was run using **ColabFold (AlphaFold2 mode)** with:
   - `num_models = 5`
@@ -38,48 +57,46 @@ All output files from ColabFold are stored separately inside each corresponding 
 
 ---
 
-## 📊 Interpretation of Key Plots
+## 4. Interpretation of Key Plots
 
 ### 🔵 `plddt_scores.png` – Per-Residue Confidence
 
 This plot shows AlphaFold’s **predicted confidence (pLDDT)** for each residue in the model.
 
-- **Y-axis:** Confidence score (0–100)
-- **X-axis:** Residue index
+- **Y-axis:** Confidence score (0–100)  
+- **X-axis:** Residue index  
 - **Lines:** Different AlphaFold models (rank_1 to rank_5)
 
-#### ✅ How to interpret:
-- Scores **>90** = very high confidence (blue in structure)
-- Scores **<70** = lower confidence or potential disorder
-- Sharp dips often indicate **low evolutionary support or flexible regions**
+#### How to interpret:
+- Scores **>90** = very high confidence (blue in structure)  
+- Scores **<70** = lower confidence or potential disorder  
+- Sharp dips often indicate **low evolutionary support or flexible regions**  
 - The model chosen (`rank_001`) typically has the **most stable high-confidence regions**
 
 ---
 
-### 🔴 `msa_coverage.png` – Sequence Alignment Depth
+### `msa_coverage.png` – Sequence Alignment Depth
 
 This plot shows how many homologous sequences were aligned to each residue (via MMseqs2).
 
-- **X-axis:** Residue index
-- **Y-axis:** Sequences in the MSA
-- **Black line:** Number of aligned sequences per position (coverage)
+- **X-axis:** Residue index  
+- **Y-axis:** Sequences in the MSA  
+- **Black line:** Number of aligned sequences per position (coverage)  
 - **Color map:** Sequence identity to query (red = low identity, blue = high)
 
-#### ✅ How to interpret:
-- **High coverage (black line up)** → strong MSA → better AlphaFold confidence
-- **Sparse or red zones** → weak evolutionary signal → likely less reliable structure
+#### How to interpret:
+- **High coverage (black line up)** → strong MSA → better AlphaFold confidence  
+- **Sparse or red zones** → weak evolutionary signal → likely less reliable structure  
 - Matches well with dips in `plddt_scores.png`
 
 Together, these plots give a **reliable view of where your structure is well-supported** and where it’s more uncertain.
 
 ---
 
-## 📸 Additional Visualization
+## 5. Additional Visualization
 
 Annotated 3D renderings of the predicted structures colored by pLDDT score are available in:
 
-results/figures/wt_structure_plddt_colored.png
+`results/figures/wt_structure_plddt_colored.png`
 
 This image was exported from the ColabFold notebook and visually complements the numerical confidence scores.
-
-
