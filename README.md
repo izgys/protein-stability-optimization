@@ -1,4 +1,4 @@
-# 🧬 Protein Stability Optimization with AI + Molecular Dynamics
+# Protein Stability Optimization with AI + Molecular Dynamics
 
 **Author:** Iker Zapirain Gysling  
 **Project Type:** Computational Protein Design + Machine Learning + Molecular Simulation  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📍 Project Overview
+## Project Overview
 
 This project explores the use of **AI-based protein sequence design** tools, such as **ProteinMPNN** and **ThermoMPNN**, to generate stabilizing mutations in a well-characterized model protein. The stability of the wild-type and designed mutants is then evaluated using **Molecular Dynamics (MD)** simulations and structural analysis.
 
@@ -14,18 +14,18 @@ The entire workflow is built to be a practical, portfolio-worthy demonstration o
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
-- ✅ Predict stabilizing mutations using **ProteinMPNN** or **ThermoMPNN**
-- ✅ Predict wild-type and mutant 3D structures using **ColabFold**
-- ✅ Simulate the wild-type and mutant protein structures using **OpenMM** or **GROMACS**
-- ✅ Analyze simulation results (RMSD, hydrogen bonds, ΔΔG proxies)
-- ✅ Evaluate and visualize structural stability differences
-- ✅ Create a clean, reproducible, and documented project for your GitHub portfolio
+- Predict stabilizing mutations using **ProteinMPNN** or **ThermoMPNN**
+- Predict wild-type and mutant 3D structures using **ColabFold**
+- Simulate the wild-type and mutant protein structures using **OpenMM** or **GROMACS**
+- Analyze simulation results (RMSD, hydrogen bonds, ΔΔG proxies)
+- Evaluate and visualize structural stability differences
+- Create a clean, reproducible, and documented project for your GitHub portfolio
 
 ---
 
-## 🛠️ Tools and Technologies
+## Tools and Technologies
 
 | Tool/Library             | Purpose                                        |
 |--------------------------|------------------------------------------------|
@@ -37,7 +37,7 @@ The entire workflow is built to be a practical, portfolio-worthy demonstration o
 
 ---
 
-## 🧪 Protein Target
+## Protein Target
 
 - **Protein:** T4 Lysozyme (mutant L99A or wild-type)
 - **PDB ID:** [2LZM](https://www.rcsb.org/structure/2LZM)
@@ -46,7 +46,7 @@ The entire workflow is built to be a practical, portfolio-worthy demonstration o
 
 ---
 
-## 🧭 Workflow Summary
+## Workflow Summary
 
 ```mermaid
 graph TD
@@ -61,7 +61,7 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 protein-stability-optimization/
@@ -85,7 +85,7 @@ protein-stability-optimization/
 
 ---
 
-## 📊 Key Analyses
+## Key Analyses
 
 - **RMSD Time Series**: Track deviation over time to compare stability.
 - **Hydrogen Bond Networks**: Quantify internal stability.
@@ -95,7 +95,7 @@ protein-stability-optimization/
 
 ---
 
-## 📈 Future Improvements
+## Future Improvements
 
 - Add support for **SolubleMPNN** for membrane targets.
 - Integrate **free energy calculations** (MM-PBSA or alchemical).
@@ -104,13 +104,13 @@ protein-stability-optimization/
 
 ---
 
-## 🧠 Learning Outcomes
+## Learning Outcomes
 
-✅ Apply cutting-edge AI tools for inverse protein design  
-✅ Predict 3D structures using ColabFold  
-✅ Run and analyze MD simulations for protein stability  
-✅ Build a reproducible and presentable research project  
-✅ Practice clean GitHub documentation and workflow sharing
+- Apply cutting-edge AI tools for inverse protein design  
+- Predict 3D structures using ColabFold  
+- Run and analyze MD simulations for protein stability  
+- Build a reproducible and presentable research project  
+- Practice clean GitHub documentation and workflow sharing
 
 ---
 
@@ -119,11 +119,5 @@ protein-stability-optimization/
 - [ ] WT vs mutant RMSD plot  
 - [ ] Structure alignment images  
 - [ ] Energy/interaction heatmaps  
-
----
-
-## 📌 License and Citation
-
-This is an academic/personal learning project. Please cite the tools used (ProteinMPNN, ColabFold, etc.) appropriately in your own work.
 
 ---
